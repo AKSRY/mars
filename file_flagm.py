@@ -8,10 +8,11 @@ def file_flagm(f_path, to_path):
   origin.close()
   chunks = {}
   while '\n' in lines:
+    raw_chunk = ''
     for lp_0 in range(lines.index('\n')):
-      raw_chunk = ''
       raw_chunk += lines[lp_0]
     chunks[lines[0].strip('\n')] = raw_chunk
+    del raw_chunk
     del lines[0:lines.index('\n')+1]
   os.chdir(to_path)
   for lp_0 in chunks.keys():
