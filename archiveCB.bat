@@ -1,0 +1,1 @@
+@pythonw.exe C:\Users\test\Documents\Python\archiveCB.pyw
